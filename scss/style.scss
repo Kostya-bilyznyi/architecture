@@ -1,0 +1,502 @@
+@font-face {
+	font-family: 'Gotham';
+	src: url('../fonts/GothamBold.ttf') format('woff'),
+		 url('../fonts/GothamBook.ttf') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gotham';
+	src: url('../fonts/GothamBook.ttf') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,400;1,600&display=swap');
+@import "normalize";
+@import "layout";
+@import "elements";
+@import "slick.scss";
+html {
+	scroll-behavior: smooth;
+	}
+body{
+	// scroll-behavior: smooth;
+font: 400 18px/1.57 "Gotham";
+}
+
+h1{
+	font: 700 80px/1.57 "Gotham";
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	margin: 0 0 5px 0;
+	color: #fff;
+}
+h2, h3{
+	color: black;
+	text-transform: uppercase;
+	font: 700 44px/0.5 "Gotham";
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	// color: #fff;
+}
+
+p{
+	margin: 0;
+}
+ul{
+	list-style: none;
+}
+/* Layout */
+.ba-container{
+	// padding-left: 20px;
+	// padding-right: 20px;
+	max-width: 1170px;
+	margin-left: auto;
+   margin-right: auto;
+}
+.ba-container--small{
+	max-width: 770px;
+	margin-left: auto;
+   margin-right: auto;
+}
+
+.ba-simple{
+	
+	background: linear-gradient( 45deg, rgb(85,183,255) 0%, rgb(126,90,255) 100%);
+	&__content{
+		text-align: center;
+		font-size: 18px;
+		position: relative;
+		// margin-bottom: 100px;
+	}
+	&__content p{
+		margin-bottom: 19%;
+		color: #fff;
+	}
+	&__circles{
+		// content: '';
+		position: absolute;
+		top: -14%;
+		right: -15%;
+	}
+	&__circles-links{
+		display: flex;
+	}
+	&__circles-links--active:before{
+		content: '';
+		position: absolute;
+		// top: 25%;
+		// left: -40%;
+		width: 10px;
+		height: 10px;
+		color: #fff;
+		border-radius: 50%;
+		border: 1px solid #fff;
+		background-size: contain;
+	}
+	&__anchor{
+		border-radius: 50%;
+		border: 1px solid #fff;
+		margin: 0 auto;
+		// margin-top: ;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+   	justify-content: center;
+	}
+	&__anchor:hover{
+		opacity: 0.5;
+	}
+}
+.ba-simple__circles-links + .ba-simple__circles-links{
+margin-top: 47px;
+}
+
+.ba-simple--cover{
+	background: url(../img/bg2.png) no-repeat top center;
+	background-size: cover;
+	min-height: 85vh;
+	text-transform: uppercase;
+	letter-spacing: 5.3px;
+}
+
+.ba-nav{
+	&__list{
+		display: flex;
+		align-items: center;
+		margin-left: 112px;
+		padding: 2px 0 0 0;
+	}
+	&__link{
+		font: 400 13px/1.57 "Gotham";
+		letter-spacing: -1.5px;
+		position: relative;
+		text-transform: uppercase;
+		
+	}
+	&__link a{
+	color: #fff;
+	}
+	&__link--active:before{
+		content: '';
+		position: absolute;
+		top: 25%;
+		left: -40%;
+		width: 10px;
+		height: 10px;
+		color: #fff;
+		border-radius: 50%;
+		border: 1px solid #fff;
+		background-size: contain;
+		background: #fff;
+	}
+	&__link a:hover{
+		color: hotpink;
+	}
+	&__link:before{
+		content: '';
+		position: absolute;
+		top: 25%;
+		left: -40%;
+		width: 10px;
+		height: 10px;
+		color: #fff;
+		border-radius: 50%;
+		border: 1px solid #fff;
+		background-size: contain;
+	}
+}
+
+.ba-nav__link + .ba-nav__link {
+margin-left: 105px;
+}
+
+.ba-header{
+	display: flex;
+	padding-top: 65px;
+	margin-bottom: 225px;
+	// justify-content: space-around;
+	&__social{
+		display: flex;
+		margin-left: 130px;
+		padding-top: 8px;
+	}
+	&__social-links{
+		border-radius: 50%;
+		border: 1px solid #fff;
+		padding: 10px;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+   	justify-content: center;
+	}
+	&__social-links:hover{
+		.ba-social-icon{
+			fill:hotpink;
+		}
+		
+	}
+}
+.ba-header__social-links + .ba-header__social-links{
+	margin-left: 21px;
+}
+
+.ba-social-icon {
+	
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: #fff;
+	z-index: 10;
+ }
+
+ .what-we-do{
+	 color: black;
+	 position: relative;
+	 margin-top: 80px;
+	 margin-bottom: 220px;
+	 &__content{
+		 display: flex;
+	 }
+	 &__heading{
+		 text-align: center;
+		 margin-bottom: 170px;
+	 }
+	 &__heading svg{
+		 margin-bottom: 35px;
+	 }
+	 &__img-back{
+		position: absolute;
+		left: 0;
+		top: 25%;
+		z-index: -1;
+	 }
+	 &____building{
+		 z-index: 1;
+	 }
+	 &__general-content{
+		 padding: 58px 0 0 70px;
+	 }
+	 &__general-content h3{
+		 margin-bottom: 35px;
+	 }
+	 &__general-content p{
+		font: 400 18px/1.67 'Open Sans', sans-serif;
+		letter-spacing: 0.15px;
+		margin-bottom: 32px;
+	}
+	&__general-content .ba-button{
+		margin-bottom: 58px;
+	}
+	&__pre-heading{
+		display: inline-block;
+		text-transform: uppercase;
+		font: 400 22px/1.57 "Gotham";
+		margin-bottom: 10px;
+	}
+	&__location{
+		display: flex;
+		align-items: center;
+		& span{
+			font: 400 italic 18px/1.57'Open Sans', sans-serif;
+			margin-left: 6px;
+		}
+	}
+ }
+
+ .location-marker{
+	height: 15px;
+	width: 15px;
+ }
+ .ba-button{
+	color: black;
+	font: 400 14px/1.57 "Gotham";
+	border: 1px solid rgb(14, 13, 13);
+	padding: 13px 40px;
+	background: transparent;
+ }
+ .ba-button--big{
+	padding: 13px 56px;
+ }
+ .ba-button:hover{
+	border: 1px solid hotpink;
+	color: hotpink;
+ }
+
+
+
+ .commerce-centre{
+	position: relative;
+	margin-bottom: 150px;
+	&__content{
+		display: flex;
+	}
+	&__img-back{
+		position: absolute;
+		right: 0;
+		top: -15%;
+		z-index: -1;
+	}
+	&__pre-heading{
+		display: inline-block;
+		text-transform: uppercase;
+		font: 400 22px/1.57 "Gotham";
+		margin-bottom: 10px;
+		margin-top: 47px;
+	}
+	&__general-content{
+		padding-right: 40px;
+		& h3{
+			margin-bottom: 40px;
+		}
+		& p{
+			font: 400 18px/1.67 'Open Sans', sans-serif;
+			letter-spacing: 0.15px;
+			margin-bottom: 32px;
+		}
+		& .ba-button{
+			margin-bottom: 55px;
+		}
+	}
+	&__location{
+		display: flex;
+		align-items: center;
+		& span{
+			font: 400 italic 18px/1.57'Open Sans', sans-serif;
+			margin-left: 6px;
+		}
+	}
+ }
+
+
+ .gallery{
+	 margin-bottom: 50px;
+	 text-align: center;
+	&__heading{
+		text-align: center;
+		margin-bottom: 105px;
+	}
+	&__heading svg{
+		margin-bottom: 35px;
+	}
+	&__content{
+		display: flex;
+		min-height: 440px;
+		position: relative;
+		margin-bottom: 52px;
+	}
+	&__content-images-small{
+		margin-left: 10px;
+	}
+	&__content-images-small img:last-child{
+		margin-left: 4px;
+		margin-top: 2px;
+	}
+	&__content-360{
+		position: absolute;
+		top: 40.5%;
+		left: 21.5%
+	}
+ }
+
+
+ .get-in-touch{
+	margin-bottom: 50px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	
+	&__content{
+		max-width: 770px;
+		max-height: 450px;
+		position: relative;
+		border: 1px solid black;
+		padding: 60px 60px 80px 80px;
+		font: 400 18px/1.57 "Gotham";
+
+	}
+	&__content ul{
+		padding: 0;
+	}
+	&__contacts{
+		text-align: left;
+	}
+	&__contacts a{
+		color: black;
+	}
+	&__contacts a:hover{
+		color: hotpink;
+	}
+	&__contacts li + li{
+		margin-top: 30px;
+	}
+	&__content-img{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+	}
+  &__heading{
+	  text-align: center;
+	  margin-bottom: 40px;
+  }
+  &__heading svg{
+	  margin-bottom: 25px;
+  }
+  &__form form{
+	  display: flex;
+	  flex-direction: column;
+	  margin-left: 50px;
+  }
+  &__label{
+	  display: flex;
+  }
+}
+
+input[name="Mollie"], input[name="Email"]{
+	outline: none;
+	border: none;
+	border-bottom: solid 2px #A5AAB0;
+	margin-bottom: 20px;
+	padding: 10px 0;
+}
+
+input[name="Mollie"]:hover, input[name="Email"]:hover{
+	border-bottom: solid 2px black;
+	color:black
+}
+
+input[name="Mollie"]{
+	margin-left: 5px;
+}
+footer{
+	z-index: -2;
+	position: relative;
+	
+}
+.ba-footer{
+	font: 400 14px/1.57 "Gotham";
+	background-image: linear-gradient( 45deg, rgb(85,183,255) 0%, rgb(126,90,255) 100%);
+	position: absolute;
+	top: -200px;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	&__social{
+		display: flex;
+		margin-left: 370px;
+		padding-top: 8px;
+	}
+	&__social a + a{
+		margin-left: 20px;
+	}
+	&__social-links{
+		border-radius: 50%;
+		border: 1px solid #fff;
+		padding: 10px;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+   	justify-content: center;
+	}
+	&__social-links:hover{
+		.ba-social-icon{
+			fill:hotpink;
+		}
+		
+	}
+}
+
+.ba-footer-cover{
+	display: flex;
+	
+	justify-content: center;
+	background: url(../img/sg.png) no-repeat top center;
+	background-size: cover;
+	padding-top: 200px;
+	margin-bottom: 30px;
+}
+.ba-footer-copyrights{
+	color: #fff;
+	display: flex;
+	margin-bottom: 30px;
+	& img{
+		width: 15px;
+		height: 15px;
+		margin: 0 5px;
+	}
+	& span{
+		margin: 0 20px;
+	}
+}
