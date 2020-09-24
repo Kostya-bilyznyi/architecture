@@ -272,15 +272,13 @@ margin-top: 47px;
 	 &__heading svg{
 		 margin-bottom: 35px;
 	 }
-	 &__img-back{
-		position: absolute;
-		left: 0;
-		top: 25%;
-		z-index: -1;
+	
+	 &__building{
+		-webkit-box-shadow: -260px -70px 0px 0px rgba(85,183,255,1);
+		-moz-box-shadow: -260px -70px 0px 0px rgba(85,183,255,1);
+		box-shadow: -260px -70px 0px 0px rgba(85,183,255,1);
 	 }
-	 &____building{
-		 z-index: 1;
-	 }
+
 	 &__general-content{
 		 padding: 58px 0 0 70px;
 	 }
@@ -374,6 +372,11 @@ margin-top: 47px;
 			font: 400 italic 18px/1.57'Open Sans', sans-serif;
 			margin-left: 6px;
 		}
+	}
+	&__building{
+		-webkit-box-shadow: 200px -70px 0px 0px rgba(126,90,255,1);
+		-moz-box-shadow: 200px -70px 0px 0px rgba(126,90,255,1);
+		box-shadow: 200px -70px 0px 0px rgba(126,90,255,1);
 	}
  }
 

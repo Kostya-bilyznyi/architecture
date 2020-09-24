@@ -887,13 +887,10 @@ ul {
     margin-bottom: 170px; }
   .what-we-do__heading svg {
     margin-bottom: 35px; }
-  .what-we-do__img-back {
-    position: absolute;
-    left: 0;
-    top: 25%;
-    z-index: -1; }
-  .what-we-do____building {
-    z-index: 1; }
+  .what-we-do__building {
+    -webkit-box-shadow: -260px -70px 0px 0px #55b7ff;
+    -moz-box-shadow: -260px -70px 0px 0px #55b7ff;
+    box-shadow: -260px -70px 0px 0px #55b7ff; }
   .what-we-do__general-content {
     padding: 58px 0 0 70px; }
   .what-we-do__general-content h3 {
@@ -968,6 +965,10 @@ ul {
     .commerce-centre__location span {
       font: 400 italic 18px/1.57 "Open Sans", sans-serif;
       margin-left: 6px; }
+  .commerce-centre__building {
+    -webkit-box-shadow: 200px -70px 0px 0px #7e5aff;
+    -moz-box-shadow: 200px -70px 0px 0px #7e5aff;
+    box-shadow: 200px -70px 0px 0px #7e5aff; }
 
 .gallery {
   margin-bottom: 50px;
