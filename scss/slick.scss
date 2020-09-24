@@ -15,10 +15,11 @@
     -webkit-tap-highlight-color: transparent;
 }
 .slick-list {
-   //  position: relative;
+    position: relative;
     display: block;
     margin: 0;
 	 padding: 0;
+	 overflow: hidden;
 	 .slick-active {
 		opacity: 1;
 	}
@@ -47,7 +48,7 @@
     top: 0;
     display: block;
     margin-left: auto;
-    margin-right: auto;
+	 margin-right: auto;
 
     &:before,
     &:after {
@@ -66,8 +67,8 @@
 .slick-slide {
     float: left;
 	 height: 100%;
-	 margin-left: 44px;
-	 max-width: 440px;
+	//  margin-left: 44px;
+	//  width: 100vw;
 	 min-height: 1px;
 	 opacity: 0.5;
 	 
@@ -88,7 +89,7 @@
     }
 
     .slick-initialized & {
-        display: block;
+      //   display: block;
     }
 
     .slick-loading & {
@@ -102,9 +103,47 @@
 	 }
 	 
 }
+.slick-slide:focus{
+	outline:none;
+}
 .slick-arrow.slick-hidden {
     display: none;
 }
 
+.ba-slick-dots{
+	position:absolute;
+	right:40px;
+	top:50%;
+}
 
+.ba-slick-dots .slick-dots li.slick-active button{
+	background-color:#fff;
+}
 
+.ba-slick-dots{
+	.slick-dots{
+		padding:0;
+		margin:0;
+		li + li {
+			margin-top: 21px;
+		}
+		li button{
+			display:inline-block;
+			width:9px;
+			height:9px;
+			border:1px solid #fff;
+			border-radius:50%;
+			font-size:0;
+			padding:0;
+			background-color:transparent;
+			outline:none
+		}
+		li button:hover{
+			background-color:hotpink;
+			border-color: hotpink;
+		}
+	}
+} 
+.ba-slick-dots .slick-dots li.slick-active button{
+	background-color:#fff;
+}
