@@ -1,7 +1,8 @@
 "use strict";
 
 
-const header = document.querySelector(".ba-general-header");
+const generalHeader = document.querySelector(".ba-general-header");
+const header = document.querySelector(".ba-header");
 const sectionOne = document.querySelector(".ba-simple");
 
 const sectionOneOptions = {
@@ -14,9 +15,12 @@ const sectionOneObserver = new IntersectionObserver(function(
 ) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
-      header.classList.add("dark-backgrould");
+		generalHeader.classList.add("dark-backgrould"),
+		header.classList.add("add-padding");
+
     } else {
-      header.classList.remove("dark-backgrould");
+		generalHeader.classList.remove("dark-backgrould"),
+		header.classList.remove("add-padding");
     }
   });
 },
@@ -36,3 +40,26 @@ bestSlider.slick({
 	arrows : false,
 	cssEase: 'linear'
 });
+
+const buildSlider = $('.ba-slider');
+buildSlider.slick({
+	dots: true,
+	infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  nextArrow: '.ba-slider-arrow--right',
+  prevArrow: '.ba-slider-arrow--left',
+  appendDots: '.ba-slider-dots'
+});
+
+let map;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: {
+            lat: -34.397,
+            lng: 150.644,
+          },
+          zoom: 8,
+        });
+      }

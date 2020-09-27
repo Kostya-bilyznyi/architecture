@@ -26,6 +26,9 @@ body{
 	font: 400 18px/1.57 "Gotham";
 }
 
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
 h1{
 	font: 700 80px/1.57 "Gotham";
 	text-transform: uppercase;
@@ -258,20 +261,27 @@ margin-top: 47px;
  }
 
  .what-we-do{
-	 color: black;
-	 position: relative;
-	 margin-top: 80px;
-	 margin-bottom: 220px;
-	 &__content{
-		 display: flex;
-	 }
-	 &__heading{
-		 text-align: center;
-		 margin-bottom: 170px;
-	 }
-	 &__heading svg{
-		 margin-bottom: 35px;
-	 }
+	color: black;
+	position: relative;
+	margin-top: 150px;
+	margin-bottom: 220px;
+
+	&__content{
+		display: flex;
+	}
+	&__heading{
+		text-align: center;
+		margin-bottom: 170px;
+	}
+	&__heading:before{
+		content: '';
+		position: absolute;
+		background: #000;
+		width: 100px;
+		height: 1px;
+		top: -7%;
+		left: 47.4%;
+	}
 	
 	 &__building{
 		-webkit-box-shadow: -260px -70px 0px 0px rgba(85,183,255,1);
@@ -322,7 +332,7 @@ margin-top: 47px;
 	background: transparent;
  }
  .ba-button--big{
-	padding: 13px 56px;
+	padding: 16px 56px;
  }
  .ba-button:hover{
 	border: 1px solid hotpink;
@@ -374,35 +384,50 @@ margin-top: 47px;
 		}
 	}
 	&__building{
-		-webkit-box-shadow: 200px -70px 0px 0px rgba(126,90,255,1);
-		-moz-box-shadow: 200px -70px 0px 0px rgba(126,90,255,1);
-		box-shadow: 200px -70px 0px 0px rgba(126,90,255,1);
+		-webkit-box-shadow: 260px -70px 0px 0px rgba(126,90,255,1);
+		-moz-box-shadow: 260px -70px 0px 0px rgba(126,90,255,1);
+		box-shadow: 260px -70px 0px 0px rgba(126,90,255,1);
 	}
  }
 
 
  .gallery{
-	 margin-bottom: 50px;
 	 text-align: center;
+	 padding: 180px 0 140px 0;
+	 position: relative;
+
 	&__heading{
 		text-align: center;
 		margin-bottom: 105px;
+		
+		
 	}
-	&__heading svg{
-		margin-bottom: 35px;
+
+	&__heading:before{
+	content: '';
+	position: absolute;
+	background: #000;
+	width: 100px;
+	height: 1px;
+	top: 13.6%;
+   left: 48%;
 	}
+
 	&__content{
 		display: flex;
 		min-height: 440px;
 		position: relative;
-		margin-bottom: 52px;
+		margin-bottom: 70px;
 	}
 	&__content-images-small{
+		display: flex;
 		margin-left: 10px;
 	}
+	&__content-images-small:first-child{
+		margin-bottom: 10px;
+	}
 	&__content-images-small img:last-child{
-		margin-left: 4px;
-		margin-top: 2px;
+		margin-left: 10px;
 	}
 	&__content-360{
 		position: absolute;
@@ -453,8 +478,14 @@ margin-top: 47px;
 	  text-align: center;
 	  margin-bottom: 40px;
   }
-  &__heading svg{
-	  margin-bottom: 25px;
+  &__heading:before{
+	content: '';
+	position: absolute;
+	background: #000;
+	width: 100px;
+	height: 1px;
+	top: 5.5%;
+	left: 44.3%;
   }
   &__form form{
 	  display: flex;
@@ -560,6 +591,7 @@ footer{
 	background: linear-gradient( 45deg, rgb(85,183,255) 0%, rgb(126,90,255) 100%);
 }
 .ba-logo{
+	
 	svg{
 		fill:#fff;
 	}
@@ -571,11 +603,230 @@ footer{
 	}
 }
 
-// .header-box-shadow{
-// 	box-shadow: 0px 4px 10px 0px rgba(5, 5, 5, 0.5);
-// }
-// &__social-links:hover{
-// 	.ba-social-icon{
-// 		fill:hotpink;
-// 		transition: 0.3s;
-// 	}
+
+.latest-news{
+	background: linear-gradient(45deg, #55b7ff 0%, #7e5aff 100%);
+	
+
+	&__wrapper{
+		background: url(../img/city2.png) no-repeat top center;
+		background-size: cover;
+		padding: 180px 0 210px 0;
+		
+	}
+	&__content{
+		position: relative;
+		// flex-direction: column;
+		// justify-content: center;
+		// align-items: center;
+		// text-align: center;
+	}
+	&__heading{
+		color: #fff;
+		margin-bottom: 100px;
+		text-align: center;
+	}
+}
+
+.ba-card{
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	margin: 0 15px;
+	height: inherit;
+	position: relative;
+	color: #000;
+
+	&__content{
+		padding: 20px 20px 30px 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 100%;
+		}
+
+	&__title{
+		font: 700 22px/1.55 "Gotham";
+		text-transform: uppercase;
+		margin-bottom: 5px;
+	}
+
+	&__text-wrapper{
+		max-height: 90px;
+		overflow: hidden;
+	}
+
+	&__text{
+		font: 400 18px/1.67 'Open Sans', sans-serif;
+		letter-spacing: -0.2px;
+		margin-bottom: 30px;
+	}
+	&__author{
+		display: flex;
+	}
+	&__author-picture{
+		object-fit: cover;
+	}
+	&__author-info{
+		margin-left: 17px;
+		padding-top: 8px;
+	}
+	&__author-name{
+		font: 400 18px/1.22 "Gotham";
+		text-transform: uppercase;
+		margin-bottom: 5px;
+	}
+	&__author-publish-date{
+		color: #55B7FF;
+		font: 400 14px/1.57 "Gotham";
+	}
+}
+.ba-card:hover .ba-icon-hover{
+	z-index: 1;
+}
+.ba-card:hover{
+	transform: scale(1.05);
+}
+
+.ba-icon-hover{
+	position: absolute;
+	top: 15%;
+	left: 40%;
+	z-index: -1;
+}
+
+
+
+.ba-slider .slick-track{
+	display: flex;
+}
+
+.ba-slider-arrow{
+	color: #fff;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	width: 40px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+	justify-content: center;
+	outline: none;
+	background: transparent;
+}
+
+.ba-slider-arrow:hover {
+	border: 3px solid #fff;
+}
+
+.ba-slider-arrow:active {
+	color: hotpink;
+	border: 3px solid hotpink;
+}
+
+.ba-slider-arrow--right{
+	position: absolute;
+	top: 52.5%;
+   right: -7.2%;
+}
+
+.ba-slider-arrow--left{
+	position: absolute;
+	top: 52.5%;
+	left: -7.2%
+}
+.add-padding{
+	padding-top: 0;
+}
+
+.hidden-logo{
+	display: none;
+}
+
+.icon-logo{
+max-height: 70px;
+}
+
+.ba-simple
+.ba-slick-dots{
+	position:absolute;
+	right:40px;
+	top:50%;
+}
+.ba-simple
+.ba-slick-dots .slick-dots li.slick-active button{
+	background-color:#fff;
+}
+.ba-simple
+.ba-slick-dots{
+	.slick-dots{
+		padding:0;
+		margin:0;
+		li + li {
+			margin-top: 21px;
+		}
+		li button{
+			display:inline-block;
+			width:9px;
+			height:9px;
+			border:1px solid #fff;
+			border-radius:50%;
+			font-size:0;
+			padding:0;
+			background-color:transparent;
+			outline:none
+		}
+		li button:hover{
+			background-color:hotpink;
+			border-color: hotpink;
+		}
+	}
+} 
+.ba-simple
+.ba-slick-dots .slick-dots li.slick-active button{
+	background-color:#fff;
+}
+
+.ba-slider{
+	margin-bottom: 50px;
+}
+
+.latest-news
+.ba-slider-dots{
+	position:absolute;
+	// right:40px;
+	top: 106.5%;
+	left: 45%;
+}
+.latest-news
+.slick-dots{
+display: flex;
+padding:0;
+		margin:0;
+		li + li {
+			margin-left: 40px;
+		}
+		li button{
+			display:inline-block;
+			width:9px;
+			height:9px;
+			border:1px solid #fff;
+			border-radius:50%;
+			font-size:0;
+			padding:0;
+			background-color:transparent;
+			outline:none
+		}
+		li button:hover{
+			background-color:hotpink;
+			border-color: hotpink;
+		}
+}
+.latest-news
+li.slick-active button{
+	background-color:#fff;
+}
+
+
+#map {
+	height: 100%;
+ }
